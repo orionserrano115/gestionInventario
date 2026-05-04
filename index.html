@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia del Cálculo Integral</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background: #4a90e2;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      text-align: center;
+      margin: 1rem;
+    }
+
+    nav button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: #333;
+      color: white;
+      transition: background 0.3s;
+    }
+
+    nav button:hover {
+      background: #555;
+    }
+
+    section {
+      padding: 1.5rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #4a90e2;
+    }
+
+    /* Modo nocturno */
+    body.night {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    body.night header {
+      background: #222;
+    }
+
+    body.night h2 {
+      color: #90caf9;
+    }
+
+    body.night nav button {
+      background: #90caf9;
+      color: #121212;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Historia del Cálculo Integral</h1>
+  </header>
+
+  <nav>
+    <button id="toggleMode">Cambiar a modo nocturno</button>
+  </nav>
+
+  <section>
+    <h2>Orígenes Antiguos</h2>
+    <p>El cálculo integral tiene raíces en la antigua Grecia, donde matemáticos como Eudoxo y Arquímedes desarrollaron métodos para calcular áreas y volúmenes mediante el agotamiento.</p>
+
+    <h2>Siglo XVII</h2>
+    <p>Durante el siglo XVII, matemáticos como Isaac Newton y Gottfried Wilhelm Leibniz formalizaron el cálculo integral como parte del cálculo moderno, introduciendo notaciones y conceptos fundamentales.</p>
+
+    <h2>Desarrollo Posterior</h2>
+    <p>En los siglos XVIII y XIX, el cálculo integral se expandió con aportes de Euler, Cauchy y Riemann, quienes establecieron bases más rigurosas y aplicaciones en física y geometría.</p>
+
+    <h2>Aplicaciones Modernas</h2>
+    <p>Hoy en día, el cálculo integral es esencial en ingeniería, economía, estadística y ciencias naturales, permitiendo modelar fenómenos complejos y resolver problemas prácticos.</p>
+  </section>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleMode');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('night');
+      if (document.body.classList.contains('night')) {
+        toggleBtn.textContent = "Cambiar a modo día";
+      } else {
+        toggleBtn.textContent = "Cambiar a modo nocturno";
+      }
+    });
+  </script>
+</body>
+</html>
